@@ -9,16 +9,14 @@
 import Foundation
 
 struct Team: Decodable {
-    let team: (KHLTeam)
+    let team: KHLTeam
 }
 
 struct KHLTeam: Decodable {
-
+    
     let name: String
     let conference: String
     let location: String
     let image: String
     let division: String
 }
-
-

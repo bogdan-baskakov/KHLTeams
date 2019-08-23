@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9F6087EE230ED25B000268C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6087ED230ED25B000268C2 /* AppDelegate.swift */; };
-		9F6087F0230ED25B000268C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6087EF230ED25B000268C2 /* ViewController.swift */; };
 		9F6087F3230ED25B000268C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6087F1230ED25B000268C2 /* Main.storyboard */; };
 		9F6087F5230ED260000268C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6087F4230ED260000268C2 /* Assets.xcassets */; };
 		9F6087F8230ED260000268C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6087F6230ED260000268C2 /* LaunchScreen.storyboard */; };
@@ -20,7 +19,6 @@
 /* Begin PBXFileReference section */
 		9F6087EA230ED25B000268C2 /* KHLTeams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHLTeams.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6087ED230ED25B000268C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F6087EF230ED25B000268C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9F6087F2230ED25B000268C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F6087F4230ED260000268C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F6087F7230ED260000268C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,11 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				9F6087ED230ED25B000268C2 /* AppDelegate.swift */,
-				9F6087EF230ED25B000268C2 /* ViewController.swift */,
+				9F608801230ED3D4000268C2 /* ListOfTeamsTableViewController.swift */,
 				9F608803230EDEA8000268C2 /* TeamCell.swift */,
 				9F6087FF230ED27F000268C2 /* Team.swift */,
 				9F6087F1230ED25B000268C2 /* Main.storyboard */,
-				9F608801230ED3D4000268C2 /* ListOfTeamsTableViewController.swift */,
 				9F6087F4230ED260000268C2 /* Assets.xcassets */,
 				9F6087F6230ED260000268C2 /* LaunchScreen.storyboard */,
 				9F6087F9230ED260000268C2 /* Info.plist */,
@@ -147,7 +144,6 @@
 				9F608800230ED280000268C2 /* Team.swift in Sources */,
 				9F608802230ED3D4000268C2 /* ListOfTeamsTableViewController.swift in Sources */,
 				9F608804230EDEA8000268C2 /* TeamCell.swift in Sources */,
-				9F6087F0230ED25B000268C2 /* ViewController.swift in Sources */,
 				9F6087EE230ED25B000268C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

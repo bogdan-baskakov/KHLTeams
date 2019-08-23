@@ -10,33 +10,31 @@ import UIKit
 
 class ListOfTeamsTableViewController: UITableViewController {
     
-    
     private let url = "https://khl.api.webcaster.pro/api/khl_mobile/teams_v2.json"
-    private let teams: [Team] = []
+    private var teams: [Team] = []
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("COUNT - \(teams.count)")
-        print("ARRAY - \(teams)")
-        
         fetchData()
     }
     
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return teams.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TeamCell
         
         let team = teams[indexPath.row]
         cell.configure(with: team)
-
+        
         return cell
     }
+    
     
     func fetchData() {
         guard let url = URL(string: url) else { return }
@@ -44,12 +42,15 @@ class ListOfTeamsTableViewController: UITableViewController {
         URLSession.shared.dataTask(with: url) { (data, _, _) in
             guard let data = data else { return }
             do {
-                let teams = try JSONDecoder().decode([Team].self, from: data)
-                print("JSON - \(teams)")
+                self.teams = try JSONDecoder().decode([Team].self, from: data)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
             } catch let error {
-                print(error)
+                print("ERRRROR: ", error)
             }
             }.resume()
     }
-
+    
 }
