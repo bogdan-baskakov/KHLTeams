@@ -22,11 +22,13 @@ class TeamCell: UITableViewCell {
         teamLocation.text = team.team.location
         teamConference.text = team.team.conference
         
-        DispatchQueue.main.async {
-            guard let imageUrl = URL(string: team.team.image) else { return }
-            guard let imageData = try? Data(contentsOf: imageUrl) else { return }
-            
-            self.teamImage.image = UIImage(data: imageData)
+        DispatchQueue.global().async {
+            DispatchQueue.main.async {
+                guard let imageUrl = URL(string: team.team.image) else { return }
+                guard let imageData = try? Data(contentsOf: imageUrl) else { return }
+                
+                self.teamImage.image = UIImage(data: imageData)
+            }
         }
     }
 }

@@ -8,16 +8,14 @@
 
 import UIKit
 
-class ListOfTeamsTableViewController: UITableViewController {
+class TeamsTableViewController: UITableViewController {
     
     private let url = "https://khl.api.webcaster.pro/api/khl_mobile/teams_v2.json"
     private var teams: [Team] = []
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchData()
+        fetchTeamsData()
     }
     
     // MARK: - Table view data source
@@ -27,20 +25,22 @@ class ListOfTeamsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TeamCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TeamCell", for: indexPath) as! TeamCell
         
         let team = teams[indexPath.row]
         cell.configure(with: team)
+        cell.selectionStyle = .none
         
         return cell
     }
     
     
-    func fetchData() {
+    func fetchTeamsData() {
         guard let url = URL(string: url) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
             guard let data = data else { return }
+            
             do {
                 self.teams = try JSONDecoder().decode([Team].self, from: data)
                 DispatchQueue.main.async {
@@ -48,7 +48,7 @@ class ListOfTeamsTableViewController: UITableViewController {
                 }
                 
             } catch let error {
-                print("ERRRROR: ", error)
+                print("Error: ", error)
             }
             }.resume()
     }

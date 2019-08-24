@@ -7,25 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F6087EE230ED25B000268C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6087ED230ED25B000268C2 /* AppDelegate.swift */; };
-		9F6087F3230ED25B000268C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6087F1230ED25B000268C2 /* Main.storyboard */; };
-		9F6087F5230ED260000268C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6087F4230ED260000268C2 /* Assets.xcassets */; };
-		9F6087F8230ED260000268C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6087F6230ED260000268C2 /* LaunchScreen.storyboard */; };
-		9F608800230ED280000268C2 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6087FF230ED27F000268C2 /* Team.swift */; };
-		9F608802230ED3D4000268C2 /* ListOfTeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F608801230ED3D4000268C2 /* ListOfTeamsTableViewController.swift */; };
+		9F608802230ED3D4000268C2 /* TeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F608801230ED3D4000268C2 /* TeamsTableViewController.swift */; };
 		9F608804230EDEA8000268C2 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F608803230EDEA8000268C2 /* TeamCell.swift */; };
+		9FDBD07523107644008D44C8 /* Teams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDBD07423107643008D44C8 /* Teams.storyboard */; };
+		9FDBD07723107681008D44C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDBD07623107681008D44C8 /* LaunchScreen.storyboard */; };
+		9FDBD079231076A5008D44C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FDBD078231076A4008D44C8 /* Assets.xcassets */; };
+		9FDBD07B231076C5008D44C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDBD07A231076C5008D44C8 /* AppDelegate.swift */; };
+		9FDBD082231087CA008D44C8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDBD080231087C9008D44C8 /* Player.swift */; };
+		9FDBD083231087CA008D44C8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDBD081231087C9008D44C8 /* Team.swift */; };
+		9FE300972310710C004BDFB9 /* PlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE300962310710C004BDFB9 /* PlayersTableViewController.swift */; };
+		9FE3009923107127004BDFB9 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE3009823107127004BDFB9 /* PlayerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F6087EA230ED25B000268C2 /* KHLTeams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHLTeams.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F6087ED230ED25B000268C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F6087F2230ED25B000268C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9F6087F4230ED260000268C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9F6087F7230ED260000268C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F6087F9230ED260000268C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F6087FF230ED27F000268C2 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		9F608801230ED3D4000268C2 /* ListOfTeamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfTeamsTableViewController.swift; sourceTree = "<group>"; };
+		9F608801230ED3D4000268C2 /* TeamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewController.swift; sourceTree = "<group>"; };
 		9F608803230EDEA8000268C2 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
+		9FDBD07423107643008D44C8 /* Teams.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Teams.storyboard; sourceTree = "<group>"; };
+		9FDBD07623107681008D44C8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9FDBD078231076A4008D44C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FDBD07A231076C5008D44C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9FDBD080231087C9008D44C8 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		9FDBD081231087C9008D44C8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		9FE300962310710C004BDFB9 /* PlayersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableViewController.swift; sourceTree = "<group>"; };
+		9FE3009823107127004BDFB9 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,67 @@
 		9F6087EC230ED25B000268C2 /* KHLTeams */ = {
 			isa = PBXGroup;
 			children = (
-				9F6087ED230ED25B000268C2 /* AppDelegate.swift */,
-				9F608801230ED3D4000268C2 /* ListOfTeamsTableViewController.swift */,
-				9F608803230EDEA8000268C2 /* TeamCell.swift */,
-				9F6087FF230ED27F000268C2 /* Team.swift */,
-				9F6087F1230ED25B000268C2 /* Main.storyboard */,
-				9F6087F4230ED260000268C2 /* Assets.xcassets */,
-				9F6087F6230ED260000268C2 /* LaunchScreen.storyboard */,
-				9F6087F9230ED260000268C2 /* Info.plist */,
+				9FE3009423107077004BDFB9 /* Model */,
+				9FE3009523107088004BDFB9 /* View */,
+				9FE3009F231072D2004BDFB9 /* Controller */,
+				9FE3009C2310718B004BDFB9 /* Storyboard */,
+				9FE3009D23107197004BDFB9 /* Supporting File */,
+				9FE3009E2310719B004BDFB9 /* Resources */,
 			);
 			path = KHLTeams;
+			sourceTree = "<group>";
+		};
+		9FE3009423107077004BDFB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FDBD080231087C9008D44C8 /* Player.swift */,
+				9FDBD081231087C9008D44C8 /* Team.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9FE3009523107088004BDFB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F608801230ED3D4000268C2 /* TeamsTableViewController.swift */,
+				9FE300962310710C004BDFB9 /* PlayersTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9FE3009C2310718B004BDFB9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9FDBD07423107643008D44C8 /* Teams.storyboard */,
+				9FDBD07623107681008D44C8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9FE3009D23107197004BDFB9 /* Supporting File */ = {
+			isa = PBXGroup;
+			children = (
+				9FDBD07A231076C5008D44C8 /* AppDelegate.swift */,
+				9F6087F9230ED260000268C2 /* Info.plist */,
+			);
+			path = "Supporting File";
+			sourceTree = "<group>";
+		};
+		9FE3009E2310719B004BDFB9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9FDBD078231076A4008D44C8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9FE3009F231072D2004BDFB9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F608803230EDEA8000268C2 /* TeamCell.swift */,
+				9FE3009823107127004BDFB9 /* PlayerCell.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +185,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F6087F8230ED260000268C2 /* LaunchScreen.storyboard in Resources */,
-				9F6087F5230ED260000268C2 /* Assets.xcassets in Resources */,
-				9F6087F3230ED25B000268C2 /* Main.storyboard in Resources */,
+				9FDBD079231076A5008D44C8 /* Assets.xcassets in Resources */,
+				9FDBD07723107681008D44C8 /* LaunchScreen.storyboard in Resources */,
+				9FDBD07523107644008D44C8 /* Teams.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,33 +198,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F608800230ED280000268C2 /* Team.swift in Sources */,
-				9F608802230ED3D4000268C2 /* ListOfTeamsTableViewController.swift in Sources */,
+				9FDBD082231087CA008D44C8 /* Player.swift in Sources */,
+				9FDBD083231087CA008D44C8 /* Team.swift in Sources */,
+				9FDBD07B231076C5008D44C8 /* AppDelegate.swift in Sources */,
+				9FE3009923107127004BDFB9 /* PlayerCell.swift in Sources */,
+				9F608802230ED3D4000268C2 /* TeamsTableViewController.swift in Sources */,
+				9FE300972310710C004BDFB9 /* PlayersTableViewController.swift in Sources */,
 				9F608804230EDEA8000268C2 /* TeamCell.swift in Sources */,
-				9F6087EE230ED25B000268C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		9F6087F1230ED25B000268C2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9F6087F2230ED25B000268C2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9F6087F6230ED260000268C2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9F6087F7230ED260000268C2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9F6087FA230ED260000268C2 /* Debug */ = {
@@ -289,10 +330,9 @@
 		9F6087FD230ED260000268C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPE3S28QP6;
-				INFOPLIST_FILE = KHLTeams/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KHLTeams/Supporting File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,10 +347,9 @@
 		9F6087FE230ED260000268C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPE3S28QP6;
-				INFOPLIST_FILE = KHLTeams/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KHLTeams/Supporting File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

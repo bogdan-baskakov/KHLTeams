@@ -9,11 +9,10 @@
 import Foundation
 
 struct Team: Decodable {
-    let team: KHLTeam
+    let team: TeamDetails
 }
 
-struct KHLTeam: Decodable {
-    
+struct TeamDetails: Decodable {
     let name: String
     let conference: String
     let location: String
