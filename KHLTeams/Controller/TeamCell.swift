@@ -23,10 +23,11 @@ class TeamCell: UITableViewCell {
         teamConference.text = team.team.conference
         
         DispatchQueue.global().async {
-            DispatchQueue.main.async {
+            
                 guard let imageUrl = URL(string: team.team.image) else { return }
                 guard let imageData = try? Data(contentsOf: imageUrl) else { return }
-                
+            
+            DispatchQueue.main.async {
                 self.teamImage.image = UIImage(data: imageData)
             }
         }

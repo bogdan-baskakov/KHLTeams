@@ -21,10 +21,11 @@ class PlayerCell: UITableViewCell {
         playerTeam.text = player.team.name
         
         DispatchQueue.global().async {
-            DispatchQueue.main.async {
+            
                 guard let imageUrl = URL(string: player.image) else { return }
                 guard let imageData = try? Data(contentsOf: imageUrl) else { return }
-                
+            
+            DispatchQueue.main.async {
                 self.playerImage.image = UIImage(data: imageData)
             }
         }
