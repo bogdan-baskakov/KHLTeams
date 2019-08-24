@@ -330,6 +330,7 @@
 		9F6087FD230ED260000268C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPE3S28QP6;
 				INFOPLIST_FILE = "$(SRCROOT)/KHLTeams/Supporting File/Info.plist";
@@ -347,6 +348,7 @@
 		9F6087FE230ED260000268C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPE3S28QP6;
 				INFOPLIST_FILE = "$(SRCROOT)/KHLTeams/Supporting File/Info.plist";
