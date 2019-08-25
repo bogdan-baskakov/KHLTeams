@@ -35,7 +35,7 @@ class TeamsTableViewController: UITableViewController {
     }
     
     
-    func fetchTeamsData() {
+    private func fetchTeamsData() {
         guard let url = URL(string: url) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in

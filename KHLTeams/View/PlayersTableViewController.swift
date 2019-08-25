@@ -29,10 +29,11 @@ class PlayersTableViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        return players.count
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return players.count
     }
     
-    func fetchPlayerssData() {
+    private func fetchPlayerssData() {
         guard let url = URL(string: url) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in

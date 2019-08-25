@@ -13,9 +13,9 @@ struct Team: Decodable {
 }
 
 struct TeamDetails: Decodable {
-    let name: String
-    let conference: String
-    let location: String
-    let image: String
-    let division: String
+    let name: String?
+    let conference: String?
+    let location: String?
+    let image: String?
+    let division: String?
 }
