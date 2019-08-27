@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class PlayersTableViewController: UITableViewController {
     
@@ -36,18 +37,32 @@ class PlayersTableViewController: UITableViewController {
     private func fetchPlayersData() {
         guard let url = URL(string: url) else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, _, _) in
-            guard let data = data else { return }
+        request(url).validate().responseJSON { dataResponse in
             
-            do {
-                self.players = try JSONDecoder().decode([Player].self, from: data)
+            switch dataResponse.result {
+            case .success(let value):
+                
+                guard let jsonData = value as? Array<[String: Any]> else { return }
+                
+                print(value)
+                
+                for dictPlayer in jsonData {
+                    
+                    let player = Player(shirt_number: dictPlayer["shirt_number"] as? Int,
+                                        name: dictPlayer["name"] as? String,
+                                        image: dictPlayer["image"] as? String,
+                                        team: dictPlayer["name"] as? PlayerTeam)
+                    
+                    self.players.append(player)
+                }
+                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
                 
-            } catch let error {
-                print("Error: ", error)
+            case . failure(let error):
+                print(error)
             }
-            }.resume()
+        }
     }
 }

@@ -17,8 +17,8 @@ class PlayerCell: UITableViewCell {
     
     func configure(with player: Player) {
         playerName.text = player.name ?? "Имя не найдено"
-        playerNumber.text = "№\(player.shirtNumber ?? 0)"
-        playerTeam.text = player.team.name ?? "Команда не найдена"
+        playerNumber.text = "№\(player.shirt_number ?? 0)"
+        playerTeam.text = player.team?.name ?? "Команда не найдена"
         
         DispatchQueue.global().async {
             

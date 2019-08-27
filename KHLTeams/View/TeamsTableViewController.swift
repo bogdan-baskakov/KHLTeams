@@ -43,7 +43,7 @@ class TeamsTableViewController: UITableViewController {
             
             switch responseJson.result {
             case .success(let value):
-                print(value)
+//                print(value)
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
