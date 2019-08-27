@@ -17,9 +17,12 @@
 		9FDBD083231087CA008D44C8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDBD081231087C9008D44C8 /* Team.swift */; };
 		9FE300972310710C004BDFB9 /* PlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE300962310710C004BDFB9 /* PlayersTableViewController.swift */; };
 		9FE3009923107127004BDFB9 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE3009823107127004BDFB9 /* PlayerCell.swift */; };
+		F1DFF3D1CBDDD04AE20F05CC /* Pods_KHLTeams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1C98A04563928478C7B636 /* Pods_KHLTeams.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D1C98A04563928478C7B636 /* Pods_KHLTeams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KHLTeams.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FBCFE768E0710E5B2AEE593 /* Pods-KHLTeams.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KHLTeams.release.xcconfig"; path = "Target Support Files/Pods-KHLTeams/Pods-KHLTeams.release.xcconfig"; sourceTree = "<group>"; };
 		9F6087EA230ED25B000268C2 /* KHLTeams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHLTeams.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6087F9230ED260000268C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F608801230ED3D4000268C2 /* TeamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		9FDBD081231087C9008D44C8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		9FE300962310710C004BDFB9 /* PlayersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableViewController.swift; sourceTree = "<group>"; };
 		9FE3009823107127004BDFB9 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		C36BA0A0B0D4B8D913AA41A3 /* Pods-KHLTeams.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KHLTeams.debug.xcconfig"; path = "Target Support Files/Pods-KHLTeams/Pods-KHLTeams.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1DFF3D1CBDDD04AE20F05CC /* Pods_KHLTeams.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C19783CCEAC6BBB823FA71C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C36BA0A0B0D4B8D913AA41A3 /* Pods-KHLTeams.debug.xcconfig */,
+				8FBCFE768E0710E5B2AEE593 /* Pods-KHLTeams.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9F6087E1230ED25B000268C2 = {
 			isa = PBXGroup;
 			children = (
 				9F6087EC230ED25B000268C2 /* KHLTeams */,
 				9F6087EB230ED25B000268C2 /* Products */,
+				1C19783CCEAC6BBB823FA71C /* Pods */,
+				B280FC94110ACD8B10621B19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +144,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		B280FC94110ACD8B10621B19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D1C98A04563928478C7B636 /* Pods_KHLTeams.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F6087FC230ED260000268C2 /* Build configuration list for PBXNativeTarget "KHLTeams" */;
 			buildPhases = (
+				CEE679B15B89B97A8D967326 /* [CP] Check Pods Manifest.lock */,
 				9F6087E6230ED25B000268C2 /* Sources */,
 				9F6087E7230ED25B000268C2 /* Frameworks */,
 				9F6087E8230ED25B000268C2 /* Resources */,
+				A139BF847C03324F87D312CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +219,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A139BF847C03324F87D312CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KHLTeams/Pods-KHLTeams-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KHLTeams/Pods-KHLTeams-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KHLTeams/Pods-KHLTeams-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEE679B15B89B97A8D967326 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KHLTeams-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9F6087E6230ED25B000268C2 /* Sources */ = {
@@ -329,6 +398,7 @@
 		};
 		9F6087FD230ED260000268C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C36BA0A0B0D4B8D913AA41A3 /* Pods-KHLTeams.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -347,6 +417,7 @@
 		};
 		9F6087FE230ED260000268C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FBCFE768E0710E5B2AEE593 /* Pods-KHLTeams.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -16,7 +16,7 @@ class PlayersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        fetchPlayerssData()
+        fetchPlayersData()
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,7 +33,7 @@ class PlayersTableViewController: UITableViewController {
         return players.count
     }
     
-    private func fetchPlayerssData() {
+    private func fetchPlayersData() {
         guard let url = URL(string: url) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in

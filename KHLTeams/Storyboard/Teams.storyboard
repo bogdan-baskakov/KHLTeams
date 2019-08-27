@@ -119,6 +119,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fmJ-F9-o52" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="eTM-fN-RKv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -234,7 +235,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfI-bW-nek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2897.1014492753625" y="1482.5892857142856"/>
+            <point key="canvasLocation" x="2897" y="1452"/>
         </scene>
         <!--Игроки-->
         <scene sceneID="CJv-RV-ieB">
@@ -254,7 +255,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgx-ut-jOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1986.9565217391305" y="1482.5892857142856"/>
+            <point key="canvasLocation" x="1987" y="1453"/>
         </scene>
     </scenes>
     <resources>

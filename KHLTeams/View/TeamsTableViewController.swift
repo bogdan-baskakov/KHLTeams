@@ -1,5 +1,5 @@
 //
-//  ListOfTeamsTableViewController.swift
+//  TeamsTableViewController.swift
 //  KHLTeams
 //
 //  Created by Bogdan Baskakov on 22/08/2019.
@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class TeamsTableViewController: UITableViewController {
     
@@ -38,19 +39,20 @@ class TeamsTableViewController: UITableViewController {
     private func fetchTeamsData() {
         guard let url = URL(string: url) else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, _, _) in
-            guard let data = data else { return }
+        request(url).validate().responseJSON { responseJson in
             
-            do {
-                self.teams = try JSONDecoder().decode([Team].self, from: data)
+            switch responseJson.result {
+            case .success(let value):
+                print(value)
+                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
                 
-            } catch let error {
-                print("Error: ", error)
+            case .failure(let error):
+                print(error)
             }
-            }.resume()
+        }
     }
-    
+
 }

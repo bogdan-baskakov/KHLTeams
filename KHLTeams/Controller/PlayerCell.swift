@@ -1,5 +1,5 @@
 //
-//  PlayerTableViewCell.swift
+//  PlayerCell.swift
 //  KHLTeams
 //
 //  Created by Bogdan Baskakov on 24/08/2019.
@@ -17,7 +17,7 @@ class PlayerCell: UITableViewCell {
     
     func configure(with player: Player) {
         playerName.text = player.name ?? "Имя не найдено"
-        playerNumber.text = "№\(player.shirt_number ?? 0)"
+        playerNumber.text = "№\(player.shirtNumber ?? 0)"
         playerTeam.text = player.team.name ?? "Команда не найдена"
         
         DispatchQueue.global().async {

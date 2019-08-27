@@ -9,10 +9,17 @@
 import Foundation
 
 struct Player: Decodable {
-    let shirt_number: Int?
+    let shirtNumber: Int?
     let name: String?
     let image: String?
     let team: PlayerTeam
+    
+    enum CodingKeys: String, CodingKey {
+        case shirtNumber = "shirt_number"
+        case name = "name"
+        case image = "image"
+        case team = "team"
+    }
 }
 
 struct PlayerTeam: Codable {
