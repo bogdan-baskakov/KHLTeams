@@ -13,8 +13,26 @@ struct Player: Decodable {
     let name: String?
     let image: String?
     let team: PlayerTeam?
+    
+    init(dictPlayer: [String: Any]) {
+        shirt_number = dictPlayer["shirt_number"] as? Int
+        name = dictPlayer["name"] as? String
+        image = dictPlayer["image"] as? String
+        team = PlayerTeam(dictPlayerTeam: (dictPlayer["team"] as? [String: Any] ?? [:]))
+        
+    }
+    
+    static func getPlayers(from jsonData: Any) -> [Player] {
+        guard let jsonData = jsonData as? Array<[String: Any]> else { return [] }
+        
+        return jsonData.compactMap { Player(dictPlayer: $0) }
+    }
 }
 
-struct PlayerTeam: Codable {
+struct PlayerTeam: Decodable {
     let name: String?
+    
+    init(dictPlayerTeam: [String: Any]) {
+        name = dictPlayerTeam["name"] as? String
+    }
 }

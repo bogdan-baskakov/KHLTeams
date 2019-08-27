@@ -35,7 +35,6 @@ class TeamsTableViewController: UITableViewController {
         return cell
     }
     
-    
     private func fetchTeamsData() {
         guard let url = URL(string: url) else { return }
         
@@ -43,7 +42,8 @@ class TeamsTableViewController: UITableViewController {
             
             switch responseJson.result {
             case .success(let value):
-//                print(value)
+                
+                self.teams = Team.getTeams(from: value)
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -52,6 +52,17 @@ class TeamsTableViewController: UITableViewController {
             case .failure(let error):
                 print(error)
             }
+        }
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let detailVC = segue.destination as! PlayersTableViewController
+            detailVC.navigationItem.title = teams[indexPath.row].team.name
+            detailVC.teamName = teams[indexPath.row].team.name
+            detailVC.fetchPlayersData()
         }
     }
 
