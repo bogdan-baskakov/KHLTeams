@@ -16,6 +16,7 @@ class PlayerCell: UITableViewCell {
     @IBOutlet var playerTeam: UILabel!
     
     func configure(with player: Player) {
+        
         playerName.text = player.name ?? "Имя не найдено"
         playerNumber.text = "№\(player.shirt_number ?? 0)"
         playerTeam.text = player.team?.name ?? "Команда не найдена"

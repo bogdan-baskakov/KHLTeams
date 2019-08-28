@@ -17,6 +17,7 @@ class TeamCell: UITableViewCell {
     @IBOutlet var teamConference: UILabel!
     
     func configure(with team: Team) {
+        
         teamName.text = team.team.name ?? "Команда не найдена"
         teamDivision.text = team.team.division ?? "Дивизион не найден"
         teamLocation.text = team.team.location ?? "Локация не найдена"

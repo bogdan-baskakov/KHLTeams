@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vzt-j0-DqH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tdv-gJ-DSD">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -99,6 +99,7 @@
                                     <outlet property="teamImage" destination="k4W-Ut-xJZ" id="489-22-EOq"/>
                                     <outlet property="teamLocation" destination="zqn-hM-iN8" id="RW2-cl-vwn"/>
                                     <outlet property="teamName" destination="WB2-xe-uT0" id="PbN-Gd-isx"/>
+                                    <segue destination="y4c-pU-mF6" kind="show" id="2Or-mc-iDu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -215,50 +216,10 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfI-bW-nek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3807" y="1414"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="GgL-fC-ZHn">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vzt-j0-DqH" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Mk0-F5-qzW">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Tdv-gJ-DSD" kind="relationship" relationship="viewControllers" id="Qmy-Pn-f60"/>
-                        <segue destination="lvV-9m-5Fl" kind="relationship" relationship="viewControllers" id="Rcn-4u-gQ2"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q6m-hs-YGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2897.1014492753625" y="685.71428571428567"/>
-        </scene>
-        <!--Игроки-->
-        <scene sceneID="yI0-44-zwx">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lvV-9m-5Fl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Игроки" image="players" id="8GR-f3-tQd"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="V5a-qI-Juz">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="y4c-pU-mF6" kind="relationship" relationship="rootViewController" id="0FI-Ru-n6g"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y3i-t0-eGS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2897" y="1414"/>
+            <point key="canvasLocation" x="5652" y="686"/>
         </scene>
     </scenes>
     <resources>
-        <image name="players" width="25" height="25"/>
         <image name="teams" width="25" height="25"/>
     </resources>
 </document>

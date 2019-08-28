@@ -13,7 +13,7 @@ class TeamsTableViewController: UITableViewController {
     
     private let url = "https://khl.api.webcaster.pro/api/khl_mobile/teams_v2.json"
     private var teams: [Team] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchTeamsData()
@@ -54,5 +54,15 @@ class TeamsTableViewController: UITableViewController {
             }
         }
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let playersVC = segue.destination as! PlayersTableViewController
+        if let indexPath = tableView.indexPathForSelectedRow {
+            playersVC.selectedTeam = teams[indexPath.row].team.name!
+            playersVC.navigationItem.title = teams[indexPath.row].team.name!
+        }
+        
+        
+    }
+    
 }
