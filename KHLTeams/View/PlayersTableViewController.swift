@@ -29,14 +29,6 @@ class PlayersTableViewController: UITableViewController {
         return players.count
     }
     
-   private func sortPlayersByTeam() {
-        for player in players.enumerated().reversed() {
-            if player.element.team?.name != selectedTeam {
-                players.remove(at: player.offset)
-            }
-        }
-    }
-    
     func fetchPlayersData() {
         guard let url = URL(string: url) else { return }
         
@@ -63,6 +55,13 @@ class PlayersTableViewController: UITableViewController {
         }
     }
     
+    private func sortPlayersByTeam() {
+        for player in players.enumerated().reversed() {
+            if player.element.team?.name != selectedTeam {
+                players.remove(at: player.offset)
+            }
+        }
+    }
 }
 
 extension PlayersTableViewController {
