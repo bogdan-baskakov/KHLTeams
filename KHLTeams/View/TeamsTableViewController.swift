@@ -63,6 +63,7 @@ class TeamsTableViewController: UITableViewController {
             
             playersVC.selectedTeam = teams[indexPath.row].team.name!
             playersVC.navigationItem.title = teams[indexPath.row].team.name!
+            playersVC.fetchPlayersData()
         }
     }
     

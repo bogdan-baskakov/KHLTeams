@@ -19,7 +19,7 @@ class PlayersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchPlayersData()
+//        fetchPlayersData()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,12 +56,12 @@ class PlayersTableViewController: UITableViewController {
                 
                 self.sortPlayersByTeam()
                 
-                DispatchQueue.main.async {
                     if self.players.isEmpty {
                         self.showAlert(title: "Упс!", message: "Команда еще не представила свой состав на этот сезон, как только инфорамация обнавится вы обязательно узнаете")
                     } else {
-                        self.tableView.reloadData()
-                    }
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
                 }
             case .failure(let error):
                 print(error)
@@ -81,7 +81,7 @@ extension PlayersTableViewController {
         )
         
         let okAction = UIAlertAction(title: "OK",
-                                     style: .default)
+                                     style: .cancel)
         
         alert.addAction(okAction)
         present(alert, animated: true)
