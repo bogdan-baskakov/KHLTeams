@@ -58,7 +58,7 @@ class PlayersTableViewController: UITableViewController {
                 
                 DispatchQueue.main.async {
                     if self.players.isEmpty {
-                        self.showAlert(title: "Упс!", message: "Команда еще не представила свой состав на этот сезон, как только инфорамация обнавится вы обязатльно узнаете")
+                        self.showAlert(title: "Упс!", message: "Команда еще не представила свой состав на этот сезон, как только инфорамация обнавится вы обязательно узнаете")
                     } else {
                         self.tableView.reloadData()
                     }
