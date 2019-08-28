@@ -54,16 +54,5 @@ class TeamsTableViewController: UITableViewController {
             }
         }
     }
-    
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let indexPath = tableView.indexPathForSelectedRow {
-            let detailVC = segue.destination as! PlayersTableViewController
-            detailVC.navigationItem.title = teams[indexPath.row].team.name
-            detailVC.teamName = teams[indexPath.row].team.name
-            detailVC.fetchPlayersData()
-        }
-    }
 
 }

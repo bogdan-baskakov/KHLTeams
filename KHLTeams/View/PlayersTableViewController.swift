@@ -13,10 +13,10 @@ class PlayersTableViewController: UITableViewController {
     
     private let url = "https://khl.api.webcaster.pro/api/khl_mobile/players_v2_light.json"
     private var players: [Player] = []
-    var teamName: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchPlayersData()
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -28,7 +28,7 @@ class PlayersTableViewController: UITableViewController {
         
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players.count
     }
@@ -51,9 +51,5 @@ class PlayersTableViewController: UITableViewController {
             }
         }
     }
-    
-    func getPlayerInChoosenTeam() {
 
-    }
-    
 }
