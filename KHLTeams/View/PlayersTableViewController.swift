@@ -14,14 +14,7 @@ class PlayersTableViewController: UITableViewController {
     private let url = "https://khl.api.webcaster.pro/api/khl_mobile/players_v2_light.json"
     private var players: [Player] = []
     var selectedTeam = ""
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-//        fetchPlayersData()
-    }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath) as! PlayerCell
         
@@ -57,7 +50,8 @@ class PlayersTableViewController: UITableViewController {
                 self.sortPlayersByTeam()
                 
                     if self.players.isEmpty {
-                        self.showAlert(title: "Упс!", message: "Команда еще не представила свой состав на этот сезон, как только инфорамация обнавится вы обязательно узнаете")
+                        self.showAlert(title: "Упс!",
+                                       message: "Команда еще не представила свой состав на этот сезон, как только инфорамация обнавится вы обязательно узнаете")
                     } else {
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
