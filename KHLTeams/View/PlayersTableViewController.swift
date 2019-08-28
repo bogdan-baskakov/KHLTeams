@@ -57,11 +57,34 @@ class PlayersTableViewController: UITableViewController {
                 self.sortPlayersByTeam()
                 
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    if self.players.isEmpty {
+                        self.showAlert(title: "Упс!", message: "Команда еще не представила свой состав на этот сезон, как только инфорамация обнавится вы обязатльно узнаете")
+                    } else {
+                        self.tableView.reloadData()
+                    }
                 }
             case .failure(let error):
                 print(error)
             }
         }
     }
+    
+}
+
+extension PlayersTableViewController {
+    
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        let okAction = UIAlertAction(title: "OK",
+                                     style: .default)
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
 }

@@ -55,14 +55,15 @@ class TeamsTableViewController: UITableViewController {
         }
     }
     
+    // MARK: - Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let playersVC = segue.destination as! PlayersTableViewController
         if let indexPath = tableView.indexPathForSelectedRow {
+            let playersVC = segue.destination as! PlayersTableViewController
+            
             playersVC.selectedTeam = teams[indexPath.row].team.name!
             playersVC.navigationItem.title = teams[indexPath.row].team.name!
         }
-        
-        
     }
     
 }
